@@ -1,5 +1,6 @@
 *.joblib
 *.crc
-/*csv
+/*.csv
 __pycache__
-*csv
+*.csv
+*.pyc
