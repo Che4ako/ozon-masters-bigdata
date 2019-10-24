@@ -18,9 +18,9 @@ fields = ["id", "label"] + numeric_features + categorical_features
 #
 
 # We create the preprocessing pipelines for both numeric and categorical data.
-#numeric_features = ['CLEANLINESS', 'ROOM', 'SERVICE', 'LOCATION']
+
 numeric_transformer = Pipeline(steps=[
-    ('imputer', SimpleImputer(strategy='median')),
+    ('imputer', SimpleImputer(strategy='mean')),
 #    ('scaler', StandardScaler())
 ])
 
