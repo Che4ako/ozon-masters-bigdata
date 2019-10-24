@@ -24,7 +24,6 @@ numeric_transformer = Pipeline(steps=[
 #    ('scaler', StandardScaler())
 ])
 
-categorical_features = ['city', 'country']
 categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
     ('label', LabelEncoder())
