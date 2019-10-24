@@ -27,7 +27,7 @@ numeric_transformer = Pipeline(steps=[
 categorical_features = ['city', 'country']
 categorical_transformer = Pipeline(steps=[
     ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
-    ('label', LabelEncoder(handle_unknown='ignore'))
+    ('label', LabelEncoder())
 ])
 
 preprocessor = ColumnTransformer(
