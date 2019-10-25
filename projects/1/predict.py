@@ -24,12 +24,12 @@ model = load("1.joblib")
 
 #read and infere
 read_opts=dict(
-        sep=',', names=fields, index_col=False, header=None,
-        iterator=True, chunksize=10000
+        sep='\t', names=fields, index_col=False, header=None,
+        iterator=True, chunksize=100000
 )
 
 for df in pd.read_csv(sys.stdin, **read_opts):
-    pred = model.predict_proba(df)
+    pred = model.predict_proba(df)[:, 1]
     out = zip(df.id, pred)
     print("\n".join(["{0},{1}".format(*i) for i in out]))
 
