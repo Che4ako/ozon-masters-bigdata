@@ -6,6 +6,7 @@ import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from joblib import dump
+from sklearn.metrics import log_loss
 
 #
 # Import model definition
@@ -53,7 +54,8 @@ X_train, X_test, y_train, y_test = train_test_split(
 #
 model.fit(X_train, y_train)
 
-model_score = model.score(X_test, y_test)
+#model_score = model.score(X_test, y_test)
+model_score = log_loss(y_test, model.predict_proba(X_test)[:, 1])
 
 logging.info(f"model score: {model_score:.3f}")
 
