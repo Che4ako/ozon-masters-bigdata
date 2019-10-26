@@ -27,6 +27,7 @@ read_opts=dict(
         sep='\t', names=fields_cut, index_col=False, header=None,
         iterator=True, chunksize=100000
 )
+logging.info(fields_cut)
 
 for df in pd.read_csv(sys.stdin, **read_opts):
     pred = model.predict_proba(df)[:, 1]
