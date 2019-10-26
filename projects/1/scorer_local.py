@@ -39,8 +39,14 @@ df_pred = pd.read_csv(pred_path, header=None, index_col=0, names=["id", "pred"],
 len_true = len(df_true)
 len_pred = len(df_pred)
 
+shape_true = df_true.shape
+shape_pred = df_pred.shape
+
 logging.info(f"TRUE RECORDS {len_true}")
 logging.info(f"PRED RECORDS {len_pred}")
+
+logging.info(f"TRUE RECORDS {shape_true}")
+logging.info(f"PRED RECORDS {shape_pred}")
 
 assert len_true == len_pred, f"Number of records differ in true and predicted sets"
 
