@@ -13,7 +13,7 @@ INPUT=$2
 OUTPUT=$3
 MAPPER=$4
 
-$HADOOP_EXE jar $HADOOP_STREAM_JAR  -files $FILES,model.py -D mapred.reduce.tasks=0 -input $INPUT -output $OUTPUT -mapper $MAPPER
+$HADOOP_EXE jar $HADOOP_STREAM_JAR  -files $FILES,projects/1/model.py -D mapred.reduce.tasks=0 -input $INPUT -output $OUTPUT -mapper $MAPPER
 
 
 
