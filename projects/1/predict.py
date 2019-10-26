@@ -27,11 +27,11 @@ read_opts=dict(
         sep='\t', names=fields_cut, index_col=False, header=None,
         iterator=True, chunksize=100000
 )
-logging.info(fields_cut)
 
 for df in pd.read_csv(sys.stdin, **read_opts):
     pred = model.predict_proba(df)[:, 1]
     out = zip(df.id, pred)
-    print("\n".join(["{0},{1}".format(*i) for i in out]))
+    #print("\n".join(["{0},{1}".format(*i) for i in out]))
+	sys.stdout.write("\n".join(["{0},{1}".format(*i) for i in out]))
 
 
