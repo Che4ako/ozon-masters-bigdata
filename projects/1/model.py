@@ -14,6 +14,7 @@ categorical_features = ["cf"+str(i) for i in range(1,27)] + ["day_number"]
 
 fields = ["id", "label"] + numeric_features + categorical_features
 fields_cut = ["id"] + numeric_features + categorical_features
+categorical_features_cut = ['cf6', 'cf9', 'cf15', 'cf19', 'cf26']
 #fields = numeric_features + categorical_features
 #
 # Model pipeline
@@ -35,7 +36,7 @@ categorical_transformer = Pipeline(steps=[
 preprocessor = ColumnTransformer(
     transformers=[
         ('num', numeric_transformer, numeric_features),
-        ('cat', categorical_transformer, categorical_features)
+        ('cat', categorical_transformer, categorical_features_cut)
     ]
 )
 
