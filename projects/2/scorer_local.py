@@ -34,7 +34,7 @@ logging.info(f"PRED PATH {pred_path}")
 df_true = pd.read_csv(true_path, header=None, index_col=0, names=["id", "true"], sep="\t")
 
 #open pred_path
-df_pred = pd.read_csv(pred_path, header=None, index_col=0, names=["id", "pred"], sep=",")
+df_pred = pd.read_csv(pred_path, header=None, index_col=0, names=["id", "pred"], sep="\t")
 
 len_true = len(df_true)
 len_pred = len(df_pred)
