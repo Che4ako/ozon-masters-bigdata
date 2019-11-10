@@ -25,7 +25,7 @@ model = load("2.joblib")
 #read and infere
 read_opts=dict(
         sep='\t', names=fields_cut, index_col=False, header=None,
-        iterator=True, chunksize=100000
+        iterator=True, chunksize=100000, na_values='\\N'
 )
 
 for df in pd.read_csv(sys.stdin, **read_opts):
