@@ -1,3 +1,5 @@
+use Che4ako;
+
 add file projects/2/predict.py;
 add file 2.joblib;
 add file projects/2/model.py;
