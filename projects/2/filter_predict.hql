@@ -1,5 +1,4 @@
 add file predict.py;
-use Che4ako;
 
 INSERT INTO TABLE hw2_pred
 

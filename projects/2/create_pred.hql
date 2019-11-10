@@ -1,5 +1,3 @@
-use Che4ako;
-
 create table hw2_pred (
     id int,
     pred int

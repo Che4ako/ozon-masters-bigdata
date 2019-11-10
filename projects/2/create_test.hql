@@ -1,5 +1,3 @@
-use Che4ako;
-
 create external table hw2_test (
     id int,
     if1 int,
