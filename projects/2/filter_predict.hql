@@ -1,4 +1,5 @@
-add files projects/2/predict.py projects/2/model.py;
+add file projects/2/model.py;
+add file projects/2/predict.py;
 
 INSERT INTO TABLE hw2_pred
 
